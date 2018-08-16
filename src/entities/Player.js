@@ -29,8 +29,8 @@ class Player extends TileSprite {
       // TODO: Figure out why moving left prior to death causes this spiral to be exaggerated
       // this.anchor.x = 0
       this.pivot.y = 24
-      this.pivot.x = 24
-      this.rotation += dt * 5
+      this.pivot.x = 24 * this.scale.x
+      this.rotation += dt * 5 * this.scale.x
       /* if (dbgFirst) {
         if (dbgCt++ > 5) dbgFirst = false
         console.log('Anchor:', this.anchor, 'Pivot:', this.pivot, 'Rotation:', this.rotation)
